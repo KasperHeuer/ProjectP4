@@ -11,6 +11,10 @@
 
 <body class="">
     <x-header />
+
+
+
+
     {{ $slot }}
 </body>
 
