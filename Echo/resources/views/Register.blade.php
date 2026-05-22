@@ -6,7 +6,7 @@
         </div>
     @endif
 
-    <x-form>
+    <x-form action="Register">
         <x-input name="name" placeholder="Enter your full name" label="Full Name" />
         <x-input name="email" type="email" placeholder="name@company.com" label="Email" />
         <x-input name="password" type="password" placeholder="Password" label="Password" />
