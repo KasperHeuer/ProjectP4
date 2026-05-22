@@ -12,7 +12,7 @@
         </div>
     @endif
 
-    <x-form>
+    <x-form action="Login">
         <x-input name="name" placeholder="Enter your name" label="Name" />
         <x-input name="password" type="password" placeholder="Enter your password" label="Password" />
     </x-form>
