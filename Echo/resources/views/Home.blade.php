@@ -12,6 +12,9 @@
             @endforeach
         </select>
     </x-form>
+    @if(empty($chats->all()))
+        <p>No chats yet</p>
+    @endif
     @foreach ($chats as $chat)
         <hr>
         <a href="/chat/{{ $chat->otherUser->id }}">
