@@ -5,7 +5,7 @@
     {{ $slot }}
     <button
     type="submit"
-    class="mt-6 w-full rounded-lg bg-blue-600 py-3 font-medium text-white transition hover:bg-blue-500"
+    class="mt-4 w-full rounded-lg bg-blue-600 py-3 font-medium text-white transition hover:bg-blue-500"
 >
     {{ $action }}
 </button>

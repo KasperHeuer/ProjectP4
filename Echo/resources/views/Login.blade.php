@@ -7,8 +7,8 @@
             <div class="overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/50 shadow-2xl backdrop-blur">
 
                 {{-- Blauwe header --}}
-                <div class="bg-blue-600 py-8 text-center">
-                    <h1 class="text-3xl font-bold text-white">
+                <div class="bg-blue-600 py-6 text-center">
+                    <h1 class="text-xl font-bold text-white">
                         Echo
                     </h1>
 

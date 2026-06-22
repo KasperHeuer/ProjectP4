@@ -8,11 +8,11 @@
 
                 {{-- Blauwe header --}}
                 <div class="bg-blue-600 py-4 text-center">
-                    <h1 class="text-3xl font-bold text-white">
+                    <h1 class="text-2xl font-bold text-white">
                         Echo
                     </h1>
 
-                    <p class="mt-2 text-sm text-blue-100">
+                    <p class="mt-`1 text-sm text-blue-100">
                         Experience seamless connectivity
                     </p>
                 </div>
@@ -20,7 +20,7 @@
                 {{-- Form --}}
                 <div class="p-4">
 
-                    <h2 class="mb-1 text-2xl font-semibold text-white">
+                    <h2 class="mb-2 text-2xl font-semibold text-white">
                         Create your account
                     </h2>
 
