@@ -1,17 +1,31 @@
-{{-- Input component --}}
-@props(['name', 'type' => 'text', 'placeholder' => '', 'value' => ''])
+@props([
+    'name',
+    'label' => '',
+    'type' => 'text',
+    'placeholder' => '',
+    'value' => ''
+])
 
-<input
-    required
-    type="{{ $type }}"
-    name="{{ $name }}"
-    id="{{ $name }}"
-    value="{{ old($name, $value ?? '') }}"
-    placeholder="{{ $placeholder }}"
-    min="1"
-    class="{{ $errors->has($name) ? 'border-red-500' : 'border-gray-300' }}"
->
+<div class="w-full">
+    @if($label)
+        <label for="{{ $name }}" class="mb-2 block text-sm font-medium text-slate-300">
+            {{ $label }}
+        </label>
+    @endif
 
-@error($name)
-    <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
-@enderror
+    <input
+        required
+        type="{{ $type }}"
+        name="{{ $name }}"
+        id="{{ $name }}"
+        value="{{ old($name, $value ?? '') }}"
+        placeholder="{{ $placeholder }}"
+        class="w-full rounded-lg border border-slate-700 bg-slate-800 px-4 py-3 text-white placeholder-slate-400 focus:border-blue-500 focus:outline-none"
+    >
+
+    @error($name)
+        <p class="mt-1 text-sm text-red-500">
+            {{ $message }}
+        </p>
+    @enderror
+</div>

@@ -2,63 +2,70 @@
 
     <div class="flex min-h-[85vh] items-center justify-center px-4">
 
-        <div class="w-full max-w-md">
+        <div class="w-full max-w-sm">
 
-            {{-- Logo --}}
-            <div class="mb-8 text-center">
-                <div class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-600">
-                    💬
+            <div class="overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/50 shadow-2xl backdrop-blur">
+
+                {{-- Blauwe header --}}
+                <div class="bg-blue-600 py-8 text-center">
+                    <h1 class="text-3xl font-bold text-white">
+                        Echo
+                    </h1>
+
+                    <p class="mt-2 text-sm text-blue-100">
+                        Connect instantly, communicate effortlessly.
+                    </p>
                 </div>
 
-                <h1 class="text-3xl font-bold text-blue-500">
-                    Echo
-                </h1>
+                {{-- Form --}}
+                <div class="p-6">
 
-                <p class="mt-2 text-sm text-slate-400">
-                    Connect instantly, communicate effortlessly.
-                </p>
-            </div>
+                    <h2 class="mb-2 text-2xl font-semibold text-white">
+                        Welcome Back
+                    </h2>
 
-            {{-- Card --}}
-            <div
-                class="rounded-2xl border border-slate-800 bg-slate-900/50 p-8 shadow-2xl backdrop-blur">
+                    <p class="mb-6 text-sm text-slate-400">
+                        Sign in to continue chatting.
+                    </p>
 
-                <h2 class="mb-6 text-center text-2xl font-semibold">
-                    Welcome Back
-                </h2>
+                    @if (session('success'))
+                        <div class="mb-4 rounded-lg border border-green-500/20 bg-green-500/10 p-3 text-green-400">
+                            {{ session('success') }}
+                        </div>
+                    @endif
 
-                @if (session('success'))
-                    <div class="mb-4 rounded-lg bg-green-500/10 border border-green-500/20 p-3 text-green-400">
-                        {{ session('success') }}
-                    </div>
-                @endif
+                    @if (session('error'))
+                        <div class="mb-4 rounded-lg border border-red-500/20 bg-red-500/10 p-3 text-red-400">
+                            {{ session('error') }}
+                        </div>
+                    @endif
 
-                @if(session('error'))
-                    <div class="mb-4 rounded-lg bg-red-500/10 border border-red-500/20 p-3 text-red-400">
-                        {{ session('error') }}
-                    </div>
-                @endif
+                    <x-form action="Login">
 
-                <x-form action="Login">
+                        <div class="space-y-5">
 
-                    <div class="space-y-5">
+                            <div>
+                                <x-input
+                                    name="name"
+                                    label="Name"
+                                    placeholder="Enter your name"
+                                />
+                            </div>
 
-                        <x-input
-                            name="name"
-                            label="Name"
-                            placeholder="Enter your name"
-                        />
+                            <div>
+                                <x-input
+                                    name="password"
+                                    type="password"
+                                    label="Password"
+                                    placeholder="Enter your password"
+                                />
+                            </div>
 
-                        <x-input
-                            name="password"
-                            type="password"
-                            label="Password"
-                            placeholder="Enter your password"
-                        />
+                        </div>
 
-                    </div>
+                    </x-form>
 
-                </x-form>
+                </div>
 
             </div>
 
